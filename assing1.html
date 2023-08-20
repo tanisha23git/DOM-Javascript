@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 0px;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Update profile picture</h1>
+        <input type="file" placeholder="choose file" class="input">
+        <p>Your profile picture</p>
+       
+        <img src="" alt="no profile picture"  class="image">
+    </div>
+
+    <script>
+        const inputElement = document.querySelector('.input');
+        const imgEl = document.querySelector('.image');
+        inputElement.addEventListener('change',()=>{
+            imgEl.src = URL.createObjectURL(inputElement.files[0])
+        })
+         
+        
+    </script>
+</body>
+</html>

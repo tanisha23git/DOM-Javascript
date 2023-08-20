@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assign3</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(lightblue,rgb(142, 142, 225));
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-direction: column;
+            height: 200px;
+            width: 200px;
+            border: 5px solid black;
+            border-radius: 5px;
+            background-color: lightgreen;
+
+        }
+        .counter{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+           
+        }
+        p{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .btn{
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 3px;
+            font-weight: 400;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <div class="counter">
+            <button id="Pbtn" class="btn">+</button>
+            <p class="display"></p>
+            <button class="Mbtn btn">-</button>
+        </div>
+    </div>
+
+    <script>
+        const Plusbttn = document.querySelector('#Pbtn');
+        const minusBttn = document.querySelector('.Mbtn');
+        let counter = document.querySelector('.display');
+        let count=0;
+        counter.innerHTML= `${count}`;
+
+
+        Plusbttn .addEventListener('click', () =>{
+
+            count++;
+            counter.innerHTML= `${count}`;
+
+        })
+        minusBttn.addEventListener('click',() =>{
+            count--;
+            if(count < 0){
+                alert('exceed limit');
+                count =0;
+            }else{
+            counter.innerHTML =`${count}`;
+            }
+        })
+    </script>
+</body>
+</html>

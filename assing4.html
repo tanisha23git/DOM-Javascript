@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assing4</title>
+</head>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+        gap: 20px;
+    }
+   button{
+    margin-top: 30px;
+   }
+   table tr{
+    margin-top: 20px;
+   }
+   input{
+    width: 200px;
+    padding: 10px;
+   }
+</style>
+<body>
+    <h1>SIGN up form</h1>
+        <form action="">
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td>
+                        <input type="text" placeholder="(minimum 3 characters)" class="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <input type="Email" placeholder="enter your email" class="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <input type="password" placeholder="(minimum 8 characters)" class="password">
+                    </td>
+                </tr>
+            </table>
+            <button class="btn">Sumbit</button>
+            
+         </form>
+      <script>
+        const button = document.querySelector('.btn');
+        const name = document.querySelector('.name');
+        const email = document.querySelector('.email')
+        const pass = document.querySelector('.password')
+        button.addEventListener('click',sumbit)
+        let val = name.textcontent;
+ 
+        
+        function sumbit(){
+            if(name.value.length < 3){
+                alert('fail validation')
+            }
+            if(pass.value.length < 8){
+                alert('fail validation')
+            }
+            else{
+                alert('form validation successfull')
+            }
+        }
+
+       
+      </script>
+
+</body>
+</html>

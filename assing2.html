@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assingment2</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            width: 100px 
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="head">This is light mode</h1>
+        <button class="btn">Toggle theme</button>
+    </div>
+    <script>
+        const heading = document.querySelector('.head')
+        const button = document.querySelector('.btn')
+        button.addEventListener('click',changebg)
+            
+           function  changebg(){
+            if(document.body.style.background === "white"){
+                heading.style.color = "white"
+                heading.textContent = "This is Dark mode"
+                document.body.style.background = "black";
+              
+            }else{
+                heading.style.color = "black"
+                heading.textContent = "This is light mode"
+               document.body.style.background = "white";
+               
+
+            }
+           }
+        
+           
+            
+
+
+            
+            
+
+            // if(document.body.style.background === "black"){
+            //     document.body.style.background = "white";
+            //     heading.style.color = "black"
+            //     heading.textContent = "this is bright mode"
+            // } 
+                  
+    
+    </script>
+</body>
+</html>
